@@ -9,7 +9,7 @@
 		<relativePath/>
 	</parent>
 	<groupId>br.com.fiap</groupId>
-	<artifactId>consumo-energia</artifactId>
+	<artifactId>cconsumoEnergia</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>consumoEnergia</name>
 	<description>Projeto atividade do cap 8 FIAP</description>

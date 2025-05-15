@@ -7,8 +7,6 @@ import java.time.LocalDate;
 
 @Entity
 @Table(name = "tbl_consumo_energia")
-@Getter
-@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @EqualsAndHashCode
@@ -36,4 +34,52 @@ public class ConsumoEnergia {
     private Double consumoEnergia;
     @Column(name = "DATA")
     private LocalDate data;
+
+    public Long getConsumoEnergiaId() {
+        return consumoEnergiaId;
+    }
+
+    public void setConsumoEnergiaId(Long consumoEnergiaId) {
+        this.consumoEnergiaId = consumoEnergiaId;
+    }
+
+    public LocalDate getData() {
+        return data;
+    }
+
+    public void setData(LocalDate data) {
+        this.data = data;
+    }
+
+    public Double getConsumoEnergia() {
+        return consumoEnergia;
+    }
+
+    public void setConsumoEnergia(Double consumoEnergia) {
+        this.consumoEnergia = consumoEnergia;
+    }
+
+    public Integer getTempoUsoMinutos() {
+        return tempoUsoMinutos;
+    }
+
+    public void setTempoUsoMinutos(Integer tempoUsoMinutos) {
+        this.tempoUsoMinutos = tempoUsoMinutos;
+    }
+
+    public Double getConsumoHora() {
+        return consumoHora;
+    }
+
+    public void setConsumoHora(Double consumoHora) {
+        this.consumoHora = consumoHora;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
 }

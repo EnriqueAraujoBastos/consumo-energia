@@ -27,7 +27,7 @@ public class UsuarioController {
 
     @GetMapping("/usuarios")
     @ResponseStatus(HttpStatus.OK)
-    public List<UsuarioExibicaoDTO> litarTodos(){
+    public List<UsuarioExibicaoDTO> listarTodos(){
         return usuarioService.listarTodos();
     }
 

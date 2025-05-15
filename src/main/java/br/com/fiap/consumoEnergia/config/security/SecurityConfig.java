@@ -32,10 +32,14 @@ public class SecurityConfig {
                 .authorizeHttpRequests(authorize -> authorize
                         .requestMatchers(HttpMethod.POST, "/auth/login").permitAll()
                         .requestMatchers(HttpMethod.POST, "/auth/register").permitAll()
-                        .requestMatchers(HttpMethod.POST, "/api/alimentos").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.DELETE, "/api/alimentos/*").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.PUT, "/api/alimentos").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET, "/api/alimentos").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers(HttpMethod.POST, "/api/usuarios").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST, "/api/consumoEnergia").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/usuarios/*").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.DELETE, "/api/consumoEnergia/*").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/usuarios").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.PUT, "/api/consumoEnergia").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET, "/api/usuarios").hasAnyRole("ADMIN", "USER")
+                        .requestMatchers(HttpMethod.GET, "/api/consumoEnergia").hasAnyRole("ADMIN", "USER")
                         .anyRequest().authenticated()
                 )
                 .addFilterBefore(
